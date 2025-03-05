@@ -10,7 +10,7 @@ export default function Deposit() {
     useEffect(() => {
         async function axiosProd() {
             try {
-                const response = await axios.get('https://bank-server-hqgb.onrender.com/data');
+                const response = await axios.get('https://bank-server-bzj6.onrender.com/data');
                 setProducts(response.data);
                 if (response.data[num]) {
                     setBal(response.data[num].amount); 
@@ -29,7 +29,7 @@ export default function Deposit() {
         setBal(updatedBalance);
 
         try {
-            await axios.put(`https://bank-server-hqgb.onrender.com/update/${product[num]._id}`, {
+            await axios.put(`https://bank-server-bzj6.onrender.com/update/${product[num]._id}`, {
                 amount: updatedBalance
             });
             alert("Updated successfully!");
