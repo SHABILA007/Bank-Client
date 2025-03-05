@@ -13,7 +13,7 @@ export default function Register(){
         e.preventDefault();
 
         let item={name:name,email:gmail,password:pass,amount:amount}
-        axios.post('https://bank-server-hqgb.onrender.com/Create',item)  
+        axios.post('https://bank-server-bzj6.onrender.com/Create',item)  
     }
     
     return(<>
