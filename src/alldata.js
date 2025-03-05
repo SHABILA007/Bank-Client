@@ -11,7 +11,7 @@ export default function Alldata() {
     async function axiosProd() {
 
         try {
-            const response = await axios.get('https://bank-server-hqgb.onrender.com/data');
+            const response = await axios.get('https://bank-server-bzj6.onrender.com/data');
             setData(response.data);
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -23,7 +23,7 @@ export default function Alldata() {
   async function handleDelete(id) {
 
     try {
-      await axios.delete(`https://bank-server-hqgb.onrender.com/delete/${id}`);
+      await axios.delete(`https://bank-server-bzj6.onrender.com/delete/${id}`);
       setData(data.filter((item) => item._id !== id));
     } catch (error) {
       console.error("Error deleting:", error);
@@ -38,7 +38,7 @@ export default function Alldata() {
   async function handleUpdate() {
 
     try {
-      await axios.put(`https://bank-server-hqgb.onrender.com/update/${editId}`, formData);
+      await axios.put(`https://bank-server-bzj6.onrender.com/update/${editId}`, formData);
       setData(data.map((item) => (item._id === editId ? { ...item, ...formData } : item)));
       setEditId(null);
       alert("Updated successfully!");
